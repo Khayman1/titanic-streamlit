@@ -1,9 +1,9 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 from modules.home import run_home
-from modules.survival_data import run_survival_data
+from modules.eda import run_survival_data
 from modules.passenger_analysis import run_passenger_analysis
 from modules.data_page import run_data_download
-from streamlit_option_menu import option_menu
 
 # 페이지 레이아웃 설정
 st.set_page_config(
@@ -22,7 +22,7 @@ def main():
         # 메뉴
         selected = option_menu(
             None,
-            ["홈", "탑승자 분석","생존 여부 자료", "데이터 다운로드"],  # 메뉴 항목
+            ["홈", "탑승자 분석","생존 예측","데이터 다운로드"],  # 메뉴 항목
             icons=["house-fill", "people-fill", "bar-chart-line-fill", "cloud-download-fill"],
             menu_icon="cast",
             default_index=0,
@@ -51,7 +51,7 @@ def main():
         run_home()
     elif selected == "탑승자 분석":
         run_passenger_analysis()
-    elif selected == "생존 여부 자료":
+    elif selected == "생존 예측":
         run_survival_data()
     elif selected == "데이터 다운로드":
         run_data_download()

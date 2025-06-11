@@ -16,7 +16,7 @@ def run_passenger_analysis():
     labels = sex_counts.index.tolist()
     sizes = sex_counts.values
     total = sum(sizes)
-    colors = {'male': "#84c8fe", 'female': "#ff98bb", '기타': '#bdbdbd'}
+    colors = {'male': '#64b5f6', 'female': "#ff98bb", '기타': '#bdbdbd'}
     pie_colors = [colors.get(label, '#ccc') for label in labels]
 
     def format_pct(pct):

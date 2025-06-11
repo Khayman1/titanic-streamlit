@@ -16,7 +16,7 @@ def run_passenger_analysis():
     labels = sex_counts.index.tolist()
     sizes = sex_counts.values
     total = sum(sizes)
-    colors = {'male': '#64b5f6', 'female': '#f06292', '기타': '#bdbdbd'}
+    colors = {'male': "#84c8fe", 'female': "#ff98bb", '기타': '#bdbdbd'}
     pie_colors = [colors.get(label, '#ccc') for label in labels]
 
     def format_pct(pct):
@@ -112,3 +112,5 @@ def run_passenger_analysis():
     - **부모/자녀와 동반한 승객**은 소수이며, 대부분은 **단독 또는 부부 단위** 탑승입니다.
     - 아이 동반 여부는 **생존 우선순위와 관련** 있을 수 있습니다.
     """)
+
+    

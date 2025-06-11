@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import joblib
-import os
 
 def run_predict():
     st.title("🚢 탑승자 생존 예측")

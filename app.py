@@ -9,13 +9,13 @@ from modules.data_page import run_data_download
 st.set_page_config(
     page_title="타이타닉 생존자 분석",
     page_icon="🚢",
-    # layout="wide"
+    layout="wide"
 )
 
 def main():
     with st.sidebar:
         # 상단 타이틀
-        st.markdown("<h2 style='color:#2196F3'>🚢 타이타닉 대시보드</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color:black'>🚢 타이타닉 대시보드</h2>", unsafe_allow_html=True)
         st.markdown("<hr style='margin-top:0;'>", unsafe_allow_html=True)
         st.markdown("<p style='color:gray;'>생존과 사망 데이터를<br>시각적으로 분석합니다.</p>", unsafe_allow_html=True)
 

@@ -2,7 +2,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 from utils import load_train_data, load_test_data, load_gender_submission_data
-
 # 한글 폰트 설정
 plt.rcParams['font.family'] = 'Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
@@ -27,8 +26,6 @@ def run_home():
         col1.metric("학습 데이터", f"{train.shape[0]}행", f"{train.shape[1]}열")
         col2.metric("테스트 데이터", f"{test.shape[0]}행", f"{test.shape[1]}열")
         col3.metric("제출 예시", f"{gender_submission.shape[0]}행", f"{gender_submission.shape[1]}열")
-
-    st.markdown("---")
 
     # 📊 주요 생존 통계 계산
     total = len(train)
@@ -96,8 +93,6 @@ def run_home():
     """
 
     st.markdown(card_css + card_html, unsafe_allow_html=True)
-
-    st.markdown("---")
 
     # (선택) 📈 상관관계 히트맵
     with st.expander("📈 수치형 변수 간 상관관계 보기"):
